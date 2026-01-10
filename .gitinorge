@@ -1,0 +1,34 @@
+# Upstract/.gitinorge
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Python
+_pytest_cache/
+_pycache_/
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Test reports and screenshots
+reports/
+screenshot/
+screenshots/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
