@@ -18,9 +18,9 @@ SCREENSHOT_PATH = 'screenshots/'
 # TEST DATA CONSTANTS
 # Note: Real credentials should be in .env file
 # These are fallback values only - use credentials.py for real values
-VALID_USERNAME = 'TEST_USER'
-VALID_PASSWORD = 'TEST_PASSWORD'
-INVALID_USER = 'INVALID_USER'
+VALID_USERNAME = 'Andorine182000@gmail.com'
+VALID_PASSWORD = 'Haveanicedday12052025@'
+INVALID_USER = 'INVALID_USER@email.com'
 INVALID_PASSWORD = 'INVALID_PW'
 
 # Menu Options
@@ -42,7 +42,7 @@ SIGNUP_BUTTON = "//button[@id='btn_signup']"
 
 LOGIN_LOGO = "//h2[normalize-space()='Existing User? Log In']"
 INPUT_EMAIL_LOGIN = "//form[@action='/login']//input[@placeholder='Your E-Mail']"
-UNPUT_PW_LOGIN = "//input[@id='current-password']"
+INPUT_PW_LOGIN = "//input[@id='current-password']"
 LOGIN_BUTTON = "//button[@id='btn_login']"
 
 # FILE PATHS
