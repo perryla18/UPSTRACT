@@ -75,7 +75,7 @@ def get_driver():
     """
     options = get_browser_options()
     if BROWSER.lower() == 'chrome':
-        driver_path = ChromeDriverManager.install()
+        driver_path = ChromeDriverManager().install()
         if 'THIRD_PARTY_NOTICES' in driver_path:
             # Tìm file chromedriver trong cùng thư mục
             driver_dir = os.path.dirname(driver_path)
