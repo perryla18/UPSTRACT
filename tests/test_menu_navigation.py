@@ -17,4 +17,18 @@ def test_navigate_News_Left(driver):
     menu.navigate_to_wire_from_menu()
     assert menu.navigate_News_in_Left()
 
+def test_navigate_News_Center(driver):
+    menu = MenuNavigation(driver)
+    email, password = get_credentials()
+    menu.navigate_to_login(email, password)
+    menu.navigate_to_wire_from_menu()
+    assert menu.navigate_News_in_Center()
+
+def test_navigate_News_Right(driver):
+    menu = MenuNavigation(driver)
+    email, password=get_credentials()
+    menu.navigate_to_login(email, password)
+    menu.navigate_to_wire_from_menu()
+    assert menu.navigate_News_in_Right()
+
 
