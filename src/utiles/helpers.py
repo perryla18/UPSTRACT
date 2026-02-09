@@ -145,6 +145,34 @@ def get_page_title(driver):
 def get_current_url(driver):
     return driver.current_url
 
+def get_link(driver, url):
+    """Verify current URL matches or contains the expected url. Returns True if match."""
+    current = driver.current_url
+    return url in current or current.rstrip('/') == url.rstrip('/')
+
+def switch_to_new_window_if_opened(driver, initial_handles = None, timeout = DEFAULT_TIMEOUT):
+    if initial_handles is None:
+        initial_handles = []
+    end_time = time.time() + timeout
+    while time.time() < end_time:
+        handles = driver.window_handles
+        for h in handles:
+            if h not in initial_handles:
+                driver.switch_to.window(h)
+                return True
+            time.sleep(0.3)
+        return False
+    
+def wait_for_url_contains(driver, substring, timeout=DEFAULT_TIMEOUT):
+    """Wait until current URL contains substring. Returns True if found."""
+    end_time = time.time() + timeout
+    while time.time() < end_time:
+        if substring in driver.current_url:
+            return True
+        time.sleep(0.3)
+    return False
+
+
 # ============================================
 # SCREENSHOT HELPERS
 # ============================================

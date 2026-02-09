@@ -7,4 +7,10 @@ def test_navigate_to_reddit(driver):
     email, password = get_credentials()
     reddit.navigate_to_login(email, password)
     assert reddit.navigate_to_reddit()
+
+def test_navigate_to_yahoo(driver):
+    yahoo = Navigation(driver)
+    email, password = get_credentials()
+    yahoo.navigate_to_login(email, password)
+    assert yahoo.navigate_to_yahoo()
     
