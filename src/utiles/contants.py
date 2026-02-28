@@ -27,12 +27,29 @@ INVALID_PASSWORD = 'INVALID_PW'
 MENU_PATH = "//a[@id='burger']"
 LOGIN_AND_SIGNUP_OPTION = "//a[normalize-space()='Login / Sign Up']"
 HOME_OPTION = "//a[normalize-space()='Home']"
-WIRE_OPTION = "//a[normalize-space()='Wire']"
+WIRE_OPTION = """//*[@id="burgermenu"]/li[1]/a"""  
 LIGHT_MODE_OPTION = "//a[normalize-space()='Light Mode']"
 SEARCH_OPTION = "//a[normalize-space()='Search']"
+SEARCH_BOX = "//input[@id='q']"
+SEARCH_BUTTON = "//button[@id='search_sub_main']"
 SETTINGS_DARK_MODE_OPTION = "//a[normalize-space()='Settings & Dark Mode']"
+
+PROFILE_SETTING_OPTION = "//a[normalize-space()='Profile & Settings']"
+PROFILE_NAME = "//input[@placeholder='Your full name']"
+PROFILE_BIO = "//input[@placeholder='A short blurb about me']"
+PROFILE_WEBSITE = "//input[@placeholder='http://mywebsite.com']"
+SAVE_SETTING_BUTTON = "//button[normalize-space()='Save Settings']"
+CURRENT_PASSWORD = "//input[@id='current-password']"
+NEW_PASSWORD = "//input[@id='new-password']"
+CONFIRM_CHANGE_PW ="//form[@action='/user/settings/password']//button[@type='submit'][normalize-space()='Confirm']"
+ALERT_CHANGE_PW = "//div[@class='toast-success']"
+
 CUSTOMIZE_OPTION = "//a[normalize-space()='Customize News Grid']"
+ALERT_CUSTOMIZE = "//div[@class='mbm text-small']"
+REMOVE_BUTTON = '//*[@id="google"]/span[2]'
+
 MEMBERSHIP_OPTION = "//a[normalize-space()='Pro Membership']"
+EXIT_BUTTON = "//a[@id='burger']"
 
 # Login| SIGNUP Page
 SIGNUP_LOGO = "//h2[normalize-space()='Sign Up Now']"

@@ -58,4 +58,4 @@ class LoginPage(BasePage):
             self.click(LOGIN_BUTTON)
         
         # Sử dụng helper method để kiểm tra validation error
-        return self.check_validation_error(self.driver, INPUT_EMAIL_LOGIN, INPUT_PW_LOGIN, SHORT_TIMEOUT)
+        return self.check_validation_error(INPUT_EMAIL_LOGIN, INPUT_PW_LOGIN, SHORT_TIMEOUT)
